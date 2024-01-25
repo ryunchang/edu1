@@ -33,7 +33,7 @@ pipeline {
             steps{
                 script{
                     // if you want to use custom registry, use the first argument, which is blank in this case
-                    docker.withRegistry('https://hub.docker.com/r/ryunchang/edu1', dockerCredentials){
+                    docker.withRegistry('', dockerCredentials){
                         dockerImageVersioned.push()
                         dockerImageLatest.push()
                     }
